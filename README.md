@@ -39,7 +39,7 @@ After a snap:
 │   (frame)    │ [ retake ]
 │              │ [ drop ]
 ╰──────────────╯
-❯ which wire is plus here?
+❯ is my pie done?
 ```
 
 - **retake** snaps again, **drop** forgets the frame.

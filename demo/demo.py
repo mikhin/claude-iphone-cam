@@ -21,21 +21,24 @@ def bg(code: int) -> str:
     return f"\x1b[48;5;{code}m"
 
 
-WOOD, BLUE, LABEL = bg(180), bg(26), bg(255) + "\x1b[38;5;16m"
+PALETTE = {"t": bg(110), "p": bg(255), "c": bg(215), "l": bg(172)}
 
-PICTURE = [
-    WOOD + " " * 22,
-    WOOD + "   " + BLUE + " " * 16 + WOOD + "   ",
-    WOOD + "   " + BLUE + "   " + LABEL + " " * 10 + BLUE + "   " + WOOD + "   ",
-    WOOD + "   " + BLUE + "   " + LABEL + "Li-ion 12V" + BLUE + "   " + WOOD + "   ",
-    WOOD + "   " + BLUE + "   " + LABEL + " " * 10 + BLUE + "   " + WOOD + "   ",
-    WOOD + "   " + BLUE + " " * 16 + WOOD + "   ",
+PIE = [
+    "tttppppppppppppppppttt",
+    "ttppcclcclccpppppppptt",
+    "tpcclcclcclcpppppppppt",
+    "tpcclcclcclcclcclcclpt",
+    "tppcclcclcclcclcclcppt",
+    "ttppcclcclcclcclccpptt",
+    "tttppppppppppppppppttt",
 ]
 
-QUESTION = "which wire is plus?"
+PICTURE = ["".join(PALETTE[cell] + " " for cell in row.lower()) for row in PIE]
+
+QUESTION = "is my pie done?"
 ANSWER = [
-    "Red is plus, black is minus. On the round plug, plus is the centre",
-    "pin and minus is the outer sleeve.",
+    "Yes: the crust is golden and the filling bubbles through the lattice.",
+    "Also, one slice is missing, so the taste test seems to be under way.",
 ]
 
 
