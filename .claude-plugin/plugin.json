@@ -1,0 +1,14 @@
+{
+  "name": "iphone-cam",
+  "version": "0.1.0",
+  "description": "Snap a frame from your iPhone camera above the prompt and send it to Claude with your next message",
+  "author": {
+    "name": "Yuri Mikhin",
+    "url": "https://github.com/mikhin"
+  },
+  "homepage": "https://github.com/mikhin/claude-iphone-cam",
+  "repository": "https://github.com/mikhin/claude-iphone-cam",
+  "license": "MIT",
+  "keywords": ["iphone", "camera", "continuity-camera", "mod", "terminal", "claude-code"],
+  "types": "./types/index.d.ts"
+}

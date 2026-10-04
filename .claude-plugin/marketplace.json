@@ -1,0 +1,19 @@
+{
+  "name": "claude-iphone-cam",
+  "owner": {
+    "name": "Yuri Mikhin",
+    "url": "https://github.com/mikhin"
+  },
+  "plugins": [
+    {
+      "name": "iphone-cam",
+      "source": "./",
+      "description": "Snap a frame from your iPhone camera above the prompt and send it to Claude with your next message",
+      "category": "productivity",
+      "tags": ["iphone", "camera", "continuity-camera", "mod", "terminal"]
+    }
+  ],
+  "metadata": {
+    "description": "Show Claude what your iPhone camera sees"
+  }
+}
