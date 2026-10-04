@@ -2,7 +2,7 @@
 
 A Claude Code mod that lets Claude see what your iPhone camera sees. Press **📷 snap** above the prompt, check the thumbnail, type your question, send.
 
-![Claude iPhone Cam in action](demo.gif)
+![Claude iPhone Cam in action](demo/pie.gif)
 
 The demo is drawn, not recorded: rebuild it with `demo/make.sh` (needs `agg` and `python3`).
 
