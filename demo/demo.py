@@ -1,4 +1,4 @@
-"""Builds demo/pie.gif: the band drawn frame by frame, real photos laid into its thumbnail.
+"""Builds demo/pies.gif: the band drawn frame by frame, real photos laid into its thumbnail.
 
 The band lives inside Claude Code's own UI, which no script can drive, so the terminal is
 drawn here as asciicast v2 and rendered by agg with the thumbnail left magenta; ffmpeg then
@@ -15,7 +15,7 @@ THUMB_COLUMNS, THUMB_ROWS = 32, 9
 HOLD_LIMIT = 4
 
 DEMO = Path(__file__).resolve().parent
-TARGET = DEMO / "pie.gif"
+TARGET = DEMO / "pies.gif"
 
 RESET = "\x1b[0m"
 DIM = "\x1b[2m"
