@@ -5,8 +5,8 @@ import type { Shot } from '../types'
 import { captureArgs, frameContext, iphoneCamera } from './camera'
 
 const HOMEBREW_FFMPEG = '/opt/homebrew/bin/ffmpeg'
-const THUMB_COLUMNS = 24
-const THUMB_ROWS = 7
+const THUMB_COLUMNS = 32
+const THUMB_ROWS = 9
 
 const shot = atom({ plugin: 'iphone-cam', key: 'shot' } as const, { kind: 'idle' } as Shot)
 

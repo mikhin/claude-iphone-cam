@@ -4,7 +4,7 @@ A Claude Code mod that lets Claude see what your iPhone camera sees. Press **ðŸ“
 
 ![Claude iPhone Cam in action](demo/pie.gif)
 
-The demo is drawn, not recorded: rebuild it with `demo/make.sh` (needs `agg` and `python3`).
+The terminal in the demo is drawn, the pies are real: photos by [Joe Dumas](https://unsplash.com/photos/89zuNmg6w0Y) and [Debby Hudson](https://unsplash.com/photos/IilbCWFsHMg) on Unsplash. Rebuild it with `demo/make.sh` (needs `agg`, `ffmpeg` and `python3`).
 
 No AirDrop, no Telegram-to-yourself, no saving files. The iPhone is already a Mac webcam through [Continuity Camera](https://support.apple.com/en-us/102546); this mod grabs one frame from it.
 
