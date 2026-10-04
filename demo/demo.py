@@ -1,4 +1,4 @@
-"""Builds demo/pies.gif: the band drawn frame by frame, real photos laid into its thumbnail.
+"""Builds demo/pies-2.gif: the band drawn frame by frame, real photos laid into its thumbnail.
 
 The band lives inside Claude Code's own UI, which no script can drive, so the terminal is
 drawn here as asciicast v2 and rendered by agg with the thumbnail left magenta; ffmpeg then
@@ -15,7 +15,7 @@ THUMB_COLUMNS, THUMB_ROWS = 32, 9
 HOLD_LIMIT = 4
 
 DEMO = Path(__file__).resolve().parent
-TARGET = DEMO / "pies.gif"
+TARGET = DEMO / "pies-2.gif"
 
 RESET = "\x1b[0m"
 DIM = "\x1b[2m"
@@ -151,7 +151,7 @@ def main() -> int:
         for i, (photo, start, end) in enumerate(windows, start=1):
             inputs += ["-i", str(DEMO / "photos" / f"{photo}.jpg")]
             chain.append(f"[{i}:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}[p{i}]")
-            chain.append(f"[{last}][p{i}]overlay={x}:{y}:format=rgb:enable='between(t,{start:.3f},{end:.3f})'[v{i}]")
+            chain.append(f"[{last}][p{i}]overlay={x}:{y}:format=rgb:enable='between(t,{start - 0.02:.3f},{end - 0.02:.3f})'[v{i}]")
             last = f"v{i}"
         chain.append(f"[{last}]split[a][b];[a]palettegen=stats_mode=full[pal];[b][pal]paletteuse=dither=sierra2_4a")
         ffmpeg(*inputs, "-filter_complex", ";".join(chain), str(TARGET))
