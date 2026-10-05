@@ -54,6 +54,18 @@ After a snap:
 
 A mod can only add text to a message, not image bytes, so Claude opens the frame with one `Read` call.
 
+## What it runs and sends
+
+The mod runs only when you press **snap**, **retake** or **drop**, and when you send a message.
+
+- **Programs it starts**, all on your Mac:
+  - `ffmpeg -hide_banner -f avfoundation -list_devices true -i ""` lists the cameras, to find the iPhone by name
+  - `ffmpeg … -i "<iPhone camera>" -ss 1.5 -frames:v 1 <frame>.jpg -ss 1.5 -frames:v 1 -vf scale=640:-2 <frame>.png` takes one frame (the full command is `captureArgs` in [`hooks/camera.ts`](hooks/camera.ts))
+  - `mkdir -p $TMPDIR/claude-cam` makes the folder the frames go to
+- **Files it reads and writes:** it reads the `TMPDIR` environment variable, checks that `/opt/homebrew/bin/ffmpeg` exists, and writes `frame-<n>.jpg` and `frame-<n>.png` to `$TMPDIR/claude-cam/`. It never deletes them; macOS clears that folder.
+- **What it adds to your messages:** on `prompt.submit`, only for a message you typed, and only while a frame is waiting, it adds one line of context: the path of the JPEG and a request to read it. Nothing else in the message changes.
+- **What it sends over the network:** nothing. The mod opens no connections. The frame reaches Anthropic only when Claude reads it, as part of the conversation, like any file Claude reads.
+
 ## License
 
 MIT

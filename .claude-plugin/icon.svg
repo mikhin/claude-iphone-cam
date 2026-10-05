@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="lens">
+      <circle cx="512" cy="560" r="150"/>
+    </clipPath>
+  </defs>
+  <rect width="1024" height="1024" fill="#1e1e2e"/>
+  <path d="M392 300 L428 240 H596 L632 300 Z" fill="#ff875f"/>
+  <rect x="192" y="290" width="640" height="470" rx="72" fill="#ff875f"/>
+  <circle cx="712" cy="372" r="26" fill="#1e1e2e"/>
+  <circle cx="512" cy="560" r="196" fill="#1e1e2e"/>
+  <g clip-path="url(#lens)">
+    <rect x="362" y="410" width="300" height="300" fill="#7a1f3d"/>
+    <g fill="#f2c27b" transform="rotate(-30 512 560)">
+      <rect x="300" y="452" width="424" height="34"/>
+      <rect x="300" y="526" width="424" height="34"/>
+      <rect x="300" y="600" width="424" height="34"/>
+      <rect x="300" y="674" width="424" height="34"/>
+      <rect x="402" y="350" width="34" height="424"/>
+      <rect x="476" y="350" width="34" height="424"/>
+      <rect x="550" y="350" width="34" height="424"/>
+      <rect x="624" y="350" width="34" height="424"/>
+    </g>
+  </g>
+  <circle cx="512" cy="560" r="150" fill="none" stroke="#f2c27b" stroke-width="22"/>
+</svg>
