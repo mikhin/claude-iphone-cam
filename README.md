@@ -13,8 +13,8 @@ No AirDrop, no Telegram-to-yourself, no saving files. The iPhone is already a Ma
 Inside Claude Code, run:
 
 ```
-/plugin marketplace add mikhin/claude-iphone-cam
-/plugin install iphone-cam
+/plugin marketplace add mikhin/claude-plugins
+/plugin install iphone-cam@mikhin
 /reload-plugins
 ```
 
